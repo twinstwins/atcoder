@@ -1,0 +1,9 @@
+n,k = gets.split.map(&:to_i)
+arr = gets.split.map(&:to_i)
+
+if k >= n
+  puts 0
+else
+  arr.sort!.reverse!
+  puts arr[k..-1].inject(&:+)
+end
